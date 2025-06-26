@@ -5,7 +5,7 @@ It combines static machine learning, YARA signature scanning, SHAP-based explain
 
 ---
 
-## 📸 Demo & Architecture
+## 📸 Demo
 
 - ▶️ **Video Demo** – See CipherWing in action
 
@@ -20,13 +20,7 @@ https://github.com/user-attachments/assets/cf70beae-e7fb-40a4-9752-073eff171734
 
 
 
-
-
-https://github.com/user-attachments/assets/c3877411-6a93-481e-805d-4f6299de7e18
-  
-- 🧭 **Architecture Diagram** – 
-![Diagram]
----
+ 
 
 ## 🚀 Features
 
