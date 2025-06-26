@@ -9,20 +9,15 @@ It combines static machine learning, YARA signature scanning, SHAP-based explain
 
 - ▶️ **Video Demo** – See CipherWing in action
 
-
-
-https://github.com/user-attachments/assets/899bf7b7-5f75-4e58-860f-b1bfbbc776f0
-
+https://github.com/user-attachments/assets/3e66390d-5e46-4219-ae9a-a00f94edb12a
 
 
 
 
- 
-- 🧭 **Architecture Diagram**
-![Diagram](https://github.com/user-attachments/assets/6c41df20-6184-4bb0-9385-55bbc86a017a)
 
   
-
+- 🧭 **Architecture Diagram** – 
+![Diagram](https://github.com/user-attachments/assets/c3877411-6a93-481e-805d-4f6299de7e18)
 ---
 
 ## 🚀 Features
@@ -85,7 +80,8 @@ pip install -r requirements.txt
 # 4. Launch the GUI (recommended)
 python UI/main.py
 
-
+# 5. Or launch the watchdog manually (optional)
+python agent/main_agent.py
 ```
 
 ---
@@ -127,8 +123,8 @@ You can also launch a benign file inside the interceptor shell to see CipherWing
 
 ## 👨‍💻 Author
 
-**Mohamed Gamal**  
-Built with 🖤
+**Mohamed "Jimmy" Gamal**  
+Built with 🖤 and fire for Linux defenders.
 
 ---
 
