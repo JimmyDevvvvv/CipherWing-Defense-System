@@ -1,0 +1,5 @@
+auto_quarantine_threshold: 0.85
+auto_respond: true
+enable_ml: true
+enable_yara: true
+log_path: ./logs
