@@ -1,47 +1,43 @@
 # 🛡️ CipherWing: AI-Powered Linux Malware Defense
 
-**CipherWing** is a modular, real-time malware detection and response system for Linux.  
-It combines static machine learning, YARA signature scanning, SHAP-based explainability, and SOAR-style real-time responses — all wrapped in a clean Tkinter-based GUI. Ideal for blue teamers, researchers, and cybersecurity enthusiasts.
+**CipherWing** is a modular, real-time malware detection and response system for Linux. It combines static machine learning, YARA signature scanning, SHAP-based explainability, and SOAR-style real-time responses — all wrapped in a clean Tkinter-based GUI. Ideal for blue teamers, researchers, and cybersecurity enthusiasts.
+
+CipherWing is not just a tool — it's a solo learning journey inspired by platforms like CrowdStrike Falcon and Plato Networks. Built from scratch, it's a love letter to modern EDR systems, aiming to explore how detections are made, how real-time responses are triggered, and how explainability strengthens visibility.
 
 ---
 
 ## 📸 Demo
 
-- ▶️ **Video Demo** – See CipherWing in action
+* ▶️ **Video Demo** – See CipherWing in action
 
 
-https://github.com/user-attachments/assets/cf70beae-e7fb-40a4-9752-073eff171734
+https://github.com/user-attachments/assets/aa514ac2-7b20-423b-82dc-737ed535cd5f
 
 
+![Diagram](https://github.com/user-attachments/assets/0f3bb330-5105-4263-9111-f46ae4a63de0)
 
-
-
- 
-
-
-
- 
+---
 
 ## 🚀 Features
 
-- 📂 **Watchdog**: Monitors sensitive directories in real time
-- 🧠 **ML Scanner**: Detects malware using trained binary & family classifiers
-- 🧬 **YARA Engine**: Signature-based rule scanning
-- 🧾 **SHAP Explainability**: Visual breakdowns of why a file was flagged
-- ⚡ **SOAR Engine**: Automatic responses (quarantine, kill, shutdown, delete)
-- 🖥️ **GUI Panel**: Tkinter dashboard to control and monitor detections
-- 🐚 **LD_PRELOAD Shell**: Intercepts and blocks real-time file executions
+* 📂 **Watchdog**: Monitors sensitive directories in real time
+* 🧠 **ML Scanner**: Detects malware using trained binary & family classifiers
+* 🧬 **YARA Engine**: Signature-based rule scanning
+* 🧾 **SHAP Explainability**: Visual breakdowns of why a file was flagged
+* ⚡ **SOAR Engine**: Automatic responses (quarantine, kill, shutdown, delete)
+* 🖥️ **GUI Panel**: Tkinter dashboard to control and monitor detections
+* 🐚 **LD\_PRELOAD Shell**: Intercepts and blocks real-time file executions
 
 ---
 
 ## 🧠 Tech Stack
 
-- Python 3.11  
-- `scikit-learn`, `joblib` – Static ML  
-- `SHAP` – Explainability  
-- `watchdog` – Directory monitoring  
-- `tkinter`, `psutil` – GUI & system interactions  
-- `yara-python` – Signature detection
+* Python 3.11
+* `scikit-learn`, `joblib` – Static ML
+* `SHAP` – Explainability
+* `watchdog` – Directory monitoring
+* `tkinter`, `psutil` – GUI & system interactions
+* `yara-python` – Signature detection
 
 ---
 
@@ -94,38 +90,53 @@ python agent/main_agent.py
 2. File is passed to the **ML Scanner** and **YARA Engine**.
 3. **SHAP** plots explain why the file was flagged.
 4. If malicious, the **SOAR Engine** can:
-   - 🔒 Quarantine
-   - 💀 Kill the Process
-   - ⚠️ Shutdown the System
-   - 🗑️ Delete the File
+
+   * 🔒 Quarantine
+   * 💀 Kill the Process
+   * ⚠️ Shutdown the System
+   * 🗑️ Delete the File
 5. All events are logged and visualized in the **GUI**.
+6. **LD\_PRELOAD-based Interceptor** actively blocks execution of flagged files.
 
 ---
 
-## 🧪 Want to Test?
+## 🧪 Data Engineering & Training
 
-Drop a file in one of the following directories:
+Instead of relying on public datasets, CipherWing’s dataset was manually engineered from scratch:
 
-- `~/Downloads`  
-- `~/Desktop`  
-- `/tmp`
+* Real malware samples from trusted sources
+* Manual family labels based on behavior and structure
+* Clean files from open-source repositories
+* Extracted features: entropy, PE headers, suspicious strings
+* Trained with k-fold validation
+* Benchmarked vs. YARA-only baseline
 
-Use the GUI to observe real-time detection, SHAP explanations, and SOAR actions.  
-You can also launch a benign file inside the interceptor shell to see CipherWing in action — safely.
+This project taught me how to move across data engineering, ML pipeline design, and security logic — not just to detect, but to explain and act.
 
 ---
 
-## 🧾 Legal Disclaimer
+## 📈 Performance
 
-> This project is for educational and research purposes only.  
-> **Do not upload real malware to GitHub**.  
-> Always test in isolated environments.
+* ML Classifier FPR: \~3.5%
+* YARA-only FPR: \~6%
+* SHAP explanations help interpret results and reduce false positives
+
+---
+
+## ⚠️ Limitations
+
+In security, acknowledging limitations isn’t just a formality — it’s a sign of maturity. No system is bulletproof, and CipherWing is no exception. Being honest about where things stand is crucial for responsible development.
+
+* No cloud sync or centralized backend
+* Local-only GUI and logs
+* Family classification (e.g., RAT vs. Trojan) can be inconsistent
+* YARA may miss packed or heavily obfuscated binaries
 
 ---
 
 ## 👨‍💻 Author
 
-**Mohamed "Jimmy" Gamal**  
+**Mohamed "Jimmy" Gamal**
 Built with 🖤 and fire for Linux defenders.
 
 ---
@@ -133,3 +144,5 @@ Built with 🖤 and fire for Linux defenders.
 ## 🔗 License
 
 **MIT License** – See [`LICENSE`](./LICENSE) file for more details.
+
+
