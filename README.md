@@ -140,6 +140,7 @@ In security, acknowledging limitations isn’t just a formality — it’s a sig
 ## 👨‍💻 Author
 
 **Mohamed Gamal**
+
 Built with love for security
 
 ---
