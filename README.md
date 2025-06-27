@@ -1,6 +1,6 @@
 # 🛡️ CipherWing: AI-Powered Linux Malware Defense
 
-**CipherWing** is a modular, real-time malware detection and response system for Linux. It combines static machine learning, YARA signature scanning, SHAP-based explainability, and SOAR-style real-time responses — all wrapped in a clean Tkinter-based GUI. Ideal for blue teamers, researchers, and cybersecurity enthusiasts.
+**CipherWing** is a modular, real-time malware detection and response system for Linux. It combines static machine learning, YARA signature scanning, SHAP-based explainability, and SOAR-style real-time responses — all wrapped in a clean Tkinter-based GUI.
 
 CipherWing is not just a tool — it's a solo learning journey inspired by platforms like CrowdStrike Falcon and Plato Networks. Built from scratch, it's a love letter to modern EDR systems, aiming to explore how detections are made, how real-time responses are triggered, and how explainability strengthens visibility.
 
