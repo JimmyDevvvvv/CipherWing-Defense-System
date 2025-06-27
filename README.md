@@ -78,8 +78,11 @@ pip install -r requirements.txt
 # 4. Launch the GUI (recommended)
 python UI/main.py
 
-# 5. Or launch the watchdog manually (optional)
+# 5. Or launch the watchdog and cipherwing shell manually (optional)
 python agent/main_agent.py
+python agent/cipherwing_shell.py
+ipc_listener.py
+
 ```
 
 ---
@@ -120,7 +123,7 @@ This project taught me how to move across data engineering, ML pipeline design, 
 * ML Classifier FPR: \~3.5%
 * YARA-only FPR: \~6%
 * SHAP explanations help interpret results and reduce false positives
-
+* Check the eval folder for more info!
 ---
 
 ## ⚠️ Limitations
@@ -136,8 +139,8 @@ In security, acknowledging limitations isn’t just a formality — it’s a sig
 
 ## 👨‍💻 Author
 
-**Mohamed "Jimmy" Gamal**
-Built with 🖤 and fire for Linux defenders.
+**Mohamed Gamal**
+Built with love for security
 
 ---
 
